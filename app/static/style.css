@@ -1,0 +1,111 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.card-header {
+    padding: 15px 20px;
+}
+
+.upload-container, .server-info {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.connection-info, .system-stats {
+    border-radius: 6px;
+}
+
+.file-icon {
+    font-size: 1.4rem;
+}
+
+.file-name {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.progress {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    transition: width 0.5s ease;
+}
+
+.empty-state {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.btn-outline-success, .btn-outline-danger {
+    transition: all 0.2s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+#uploadResult {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 15px;
+    }
+    
+    .file-name {
+        max-width: 120px;
+    }
+    
+    .table-responsive {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .file-name {
+        max-width: 80px;
+    }
+    
+    .btn-group .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Animation for progress bar */
+@keyframes progress-bar-stripes {
+    from { background-position: 1rem 0; }
+    to { background-position: 0 0; }
+}
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+}
